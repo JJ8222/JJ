@@ -12,14 +12,41 @@ public class shapes {
     //         System.out.println("");
     //     } 
 
-      System.out.println("Enter base length");
+      // System.out.println("Enter base length");
+      // int base = input.nextInt();
+      //  for (int i = -1; i<base; i++) {
+      //    for (int a = -1; a<i; a++) {
+      //        System.out.print("* ");
+      //    }
+      //    System.out.println("");
+      //  }
+        // System.out.println("Enter an odd base length");
+        //  int user = input.nextInt();
+        //  int space = user/2;
+        // for (int i = 0; i<user;i++) {
+        //   for (int a = -1; a<i; a++) {
+        //     System.out.print("*");
+        //   }
+        //   System.out.println("");
+        // }
+
+
+ System.out.println("Enter base length");
       int base = input.nextInt();
-       for (int i = 1; i<base; i++) {
-         for (int a = 0; i<base; a++) {
-             System.out.println("*");
+        int b = base/2;
+        int x = 0;
+        for (int i = 0; i<=b; i++) {
+          int j = i;
+          for (int a = base; a>x; a--) {
+               System.out.print("  ");
+           } j=j*2;
+              x++;
+               for (int k = 0; k<=j; k++) {
+             System.out.print("* ");
          }
          System.out.println("");
-       }
-
+         }
     }
-}
+  }
+
+  
