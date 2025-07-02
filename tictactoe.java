@@ -3,33 +3,65 @@ public class tictactoe {
     public static void main(String[] args) {
      Scanner input = new Scanner(System.in); 
      String[][] Board = new String [3][3];
+     int i;
+     int a;
       System.out.println("First: Enter 0 for first row, 1 for middle row, 2 for end row. Next: enter 0 for first column, 1 for middle column, and 2 for end column");
-           for (int i = 0; i<3; i++) {
-        for (int a = 0; a<3; a++) {
+           for (i = 0; i<3; i++) {
+        for (a = 0; a<3; a++) {
             String p = "- ";
             Board[i][a] = p;
             System.out.print(Board[i][a]);
         }
         System.out.println("");
       }
-        int s = input.nextInt();
-   int d = input.nextInt();
-   String x = "X";
-   Board[s][d] = x;
-       System.out.println(Board[s][d]);
- for (int i = 0; i<3; i++) {
-        for (int a = 0; a<3; a++) {
-            String p = "- ";
-            Board[i][a] = p;
-            System.out.print(Board[i][a]);
+      String swi = "X ";
+   boolean b = true;
+      while (b) {
+         System.out.println("First: Enter 0 for first row, 1 for middle row, 2 for end row. Next: enter 0 for first column, 1 for middle column, and 2 for end column");
+//         int s = input.nextInt();
+//         int d = input.nextInt();
+//  for (int i = 0; i<3; i++) {
+//         for (int a = 0; a<3; a++) {
+//           String x = "X ";
+//         Board[s][d] = x;
+//              System.out.print(Board[i][a]);
+//         }
+//         System.out.println("");
+//       }
+       int j = input.nextInt();
+       int v = input.nextInt();
+       String oi = Board[j][v];
+       boolean fb = oi.equals("- ");
+       if (!fb) {
+        System.out.println("invalid");
+        break;
+       }
+       for (int h = 0; h<3; h++) {
+        for (int k = 0; k<3; k++) {
+        Board[j][v] = swi;
+             System.out.print(Board[h][k]);
         }
         System.out.println("");
       }
-   
-
-
+        for (int e=0; e<3; e++) {
+if (Board[e][0].equals(swi) && Board[e][1].equals(swi) && Board[e][2].equals(swi) || Board[1][e].equals(swi) && Board[2][e].equals(swi) && Board[0][e].equals(swi)
+ || Board[0][0].equals(swi) && Board[1][1].equals(swi) && Board[2][2].equals(swi) || Board[0][2].equals(swi) && Board[1][1].equals(swi) && Board[2][0].equals(swi)) {
+        if (swi.equals("X ")) {
+        System.out.println("x wins"); }
+        else if (swi.equals("O ")) {
+        System.out.println("o wins"); }
+        b = false;
+ }
+      }
+      if (swi.equals("X ")) 
+        swi = "O ";
+      else if (swi.equals("O "))
+      swi = "X ";
+      }
     }
-}
+  }
+    
+
     
     
 
